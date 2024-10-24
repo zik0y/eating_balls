@@ -1,0 +1,49 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: "PingFangSC-Regular", "微软雅黑", sans-serif;
+}
+
+#gameContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 水平居中canvas */
+    justify-content: center; /* 垂直居中canvas（如果需要的话，但在这个例子中我们不会这样做） */
+    height: 100%;
+    padding-bottom: 60px; /* 为controls留出空间 */
+}
+
+canvas {
+    display: block;
+    background-color: #fff;
+    border: 4px solid #000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 80%; /* 相对于gameContainer的宽度 */
+    height: auto; /* 或者设置具体的百分比高度，但通常画布高度与内容是动态相关的 */
+}
+
+#controls {
+    display: flex;
+    justify-content: flex-start; /* 使按钮靠左对齐 */
+    align-items: center; /* 如果需要垂直居中按钮 */
+    padding: 10px; /* 一些内边距，让按钮看起来不那么紧凑 */
+    background-color: rgba(255, 255, 255, 0.8); /* 可选：为controls添加背景色和透明度 */
+    border-radius: 8px; /* 可选：为controls添加圆角 */
+    position: absolute; /* 如果需要它固定在屏幕底部 */
+    bottom: 20px; /* 距离底部 */
+    left: 50%; /* 水平居中的起始点 */
+    transform: translateX(-50%); /* 向左偏移以实现水平居中 */
+    width: 80%; /* 与canvas相同的宽度 */
+    box-sizing: border-box; /* 包含padding和border在内 */
+}
+
+#controls button {
+    margin-right: 5px;
+}
+p {
+  position: absolute;
+  margin: 0;
+  top: 35px;
+  right: 5px;
+  color: #aaa;
+}
